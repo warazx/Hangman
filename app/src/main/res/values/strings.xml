@@ -4,4 +4,6 @@
     <string name="start_game_text">Starta spel</string>
     <string name="about_text">Om</string>
     <string name="startscreen_title_text">Huvudmeny</string>
+    <string name="user_guess_hint_text">Vad är din gissning?</string>
+    <string name="guess_button_text">Gissa!</string>
 </resources>

@@ -1,9 +1,11 @@
-package com.example.christiankarlsson.hangman;
+package com.example.christiankarlsson.hangman.ui;
 
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
+
+import com.example.christiankarlsson.hangman.R;
 
 public class MainActivity extends AppCompatActivity {
 

@@ -17,6 +17,7 @@ public class GameActivity extends AppCompatActivity {
     private Button button;
     private TextView guessesLeftTextView;
     private TextView usedGuessesTextView;
+    private TextView secretWordTextView;
     private HangmanGame hangmanGame;
 
     @Override
@@ -30,6 +31,7 @@ public class GameActivity extends AppCompatActivity {
         button = (Button) findViewById(R.id.guess_button);
         guessesLeftTextView = (TextView) findViewById(R.id.guess_left_text);
         usedGuessesTextView = (TextView) findViewById(R.id.used_guesses_text);
+        secretWordTextView = (TextView) findViewById(R.id.secret_word_text);
 
         updateView();
     }
@@ -37,13 +39,13 @@ public class GameActivity extends AppCompatActivity {
     private void updateView() {
         guessesLeftTextView.setText(hangmanGame.getGuessesLeft());
         usedGuessesTextView.setText(hangmanGame.getUsedGuesses());
+        secretWordTextView.setText(hangmanGame.getFormattedMaskedSecretWord());
     }
 
     public void userGuess() {
         char c = editText.getText().toString().charAt(0);
 
         if(hangmanGame.addUserGuesses(c)) {
-
             guessSuccess(c);
         } else {
             guessFailed(c);

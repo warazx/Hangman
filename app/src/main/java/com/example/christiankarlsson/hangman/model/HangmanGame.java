@@ -44,6 +44,19 @@ public class HangmanGame {
         return str;
     }
 
+    public String getMaskedSecretWord() {
+        return maskedWord;
+    }
+
+    public String getFormattedMaskedSecretWord() {
+        String str = "";
+        for(int i = 0; i < maskedWord.length(); i++) {
+            str += maskedWord.charAt(i) + " ";
+        }
+        str = str.substring(0,str.length()-1);
+        return str;
+    }
+
     public boolean addUserGuesses(char c) {
         c = Character.toUpperCase(c);
         for(char used : userGuesses) {
@@ -55,6 +68,14 @@ public class HangmanGame {
         userGuesses.add(c);
         return true;
     }
+
+    /*private boolean matchSecretWord(char c) {
+        for(int i = 0; i < secretWord.length(); i++) {
+            if(secretWord.charAt(i) == c) {
+
+            }
+        }
+    }*/
 
     public String getUsedGuesses() {
         String str = "";

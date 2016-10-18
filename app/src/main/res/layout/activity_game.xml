@@ -35,7 +35,7 @@
         android:text="@string/guesses_left_label"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@id/secret_word_text"
+        android:layout_below="@+id/secret_word_text"
         android:paddingTop="30dp"
         android:textSize="24dp"
         android:id="@+id/guess_left_label" />
@@ -70,7 +70,7 @@
 
     <TextView
         android:text="SECRETWORD"
-        android:textSize="24dp"
+        android:textSize="32dp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"

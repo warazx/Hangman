@@ -45,18 +45,21 @@ public class GameActivity extends AppCompatActivity {
     }
 
     public void userGuess(View view) {
-        char c = editText.getText().toString().charAt(0);
-
-        if(hangmanGame.addUserGuesses(c)) {
-            if(hangmanGame.hasWon()) {
-                Intent intent = new Intent(this, WonActivity.class);
-                startActivity(intent);
+        try {
+            char c = editText.getText().toString().charAt(0);
+            if(hangmanGame.addUserGuesses(c)) {
+                if(hangmanGame.hasWon()) {
+                    Intent intent = new Intent(this, WonActivity.class);
+                    startActivity(intent);
+                }
+                updateView();
+            } else {
+                Toast.makeText(this, R.string.error_fail_input, Toast.LENGTH_SHORT).show();
             }
-            updateView();
-        } else {
+            editText.setText("");
+        } catch (Exception e) {
             Toast.makeText(this, R.string.error_fail_input, Toast.LENGTH_SHORT).show();
         }
-        editText.setText("");
     }
 
 

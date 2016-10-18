@@ -11,7 +11,7 @@ public class HangmanGame {
     private int guessesLeft;
 
     public HangmanGame() {
-        secretWord = "BANAN";
+        secretWord = GenerateRandomWord.getWord().toUpperCase();
         maskedWord = generateMaskedWord(secretWord);
         userGuesses = new ArrayList<>();
         wrongGuesses = new ArrayList<>();

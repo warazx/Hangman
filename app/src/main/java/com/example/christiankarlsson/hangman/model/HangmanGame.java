@@ -26,8 +26,8 @@ public class HangmanGame {
         return userGuesses;
     }
 
-    public int getGuessesLeft() {
-        return guessesLeft;
+    public String getGuessesLeft() {
+        return "" + guessesLeft;
     }
 
     public void setUsedGuesses(int guessesLeft) {
@@ -47,8 +47,11 @@ public class HangmanGame {
 
     public String getUsedGuesses() {
         String str = "";
-        for(char c : userGuesses) {
-            str += c + ", ";
+        if(userGuesses.size() != 0) {
+            for(char c : userGuesses) {
+                str += c + ", ";
+            }
+            str = str.substring(0,str.length()-2);
         }
         return str;
     }

@@ -36,8 +36,7 @@ public class GameActivity extends AppCompatActivity {
 
     private void updateView() {
         guessesLeftTextView.setText(hangmanGame.getGuessesLeft());
-        //TODO: Set text of used guesses.
-
+        usedGuessesTextView.setText(hangmanGame.getUsedGuesses());
     }
 
     public void userGuess() {

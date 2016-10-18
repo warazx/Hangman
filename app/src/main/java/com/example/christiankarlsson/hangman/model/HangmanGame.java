@@ -5,12 +5,14 @@ import java.util.ArrayList;
 public class HangmanGame {
     private static final int MAX_GUESSES = 10;
     private String secretWord;
+    private String maskedWord;
     private ArrayList<Character> userGuesses;
     private int guessesLeft;
 
     public HangmanGame() {
-        this.secretWord = "BANAN";
-        this.userGuesses = new ArrayList<>();
+        secretWord = "BANAN";
+        maskedWord = generateMaskedWord(secretWord);
+        userGuesses = new ArrayList<>();
         guessesLeft = MAX_GUESSES;
     }
 
@@ -34,15 +36,24 @@ public class HangmanGame {
         this.guessesLeft = guessesLeft;
     }
 
+    private String generateMaskedWord(String s) {
+        String str = "";
+        for(int i = 0; i < s.length(); i++) {
+            str += "_";
+        }
+        return str;
+    }
+
     public boolean addUserGuesses(char c) {
         c = Character.toUpperCase(c);
         for(char used : userGuesses) {
             if(used == c) {
-                return true;
+                //matchSecretWord(c);
+                return false;
             }
         }
         userGuesses.add(c);
-        return false;
+        return true;
     }
 
     public String getUsedGuesses() {

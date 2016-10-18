@@ -43,16 +43,20 @@ public class GameActivity extends AppCompatActivity {
         char c = editText.getText().toString().charAt(0);
 
         if(hangmanGame.addUserGuesses(c)) {
+
             guessSuccess(c);
         } else {
             guessFailed(c);
         }
     }
 
+    private void guessSuccess(char c) {
+
+    }
+
     private void guessFailed(char c) {
 
     }
 
-    private void guessSuccess(char c) {
-    }
+
 }

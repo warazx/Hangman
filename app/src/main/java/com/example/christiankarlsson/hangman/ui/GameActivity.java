@@ -5,6 +5,7 @@ import android.os.Bundle;
 import android.util.Log;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.christiankarlsson.hangman.R;
@@ -14,6 +15,8 @@ public class GameActivity extends AppCompatActivity {
 
     private EditText editText;
     private Button button;
+    private TextView guessesLeftTextView;
+    private TextView usedGuessesTextView;
     private HangmanGame hangmanGame;
 
     @Override
@@ -25,8 +28,32 @@ public class GameActivity extends AppCompatActivity {
 
         editText = (EditText) findViewById(R.id.user_guess_text);
         button = (Button) findViewById(R.id.guess_button);
+        guessesLeftTextView = (TextView) findViewById(R.id.guess_left_text);
+        usedGuessesTextView = (TextView) findViewById(R.id.used_guesses_text);
+
+        updateView();
+    }
+
+    private void updateView() {
+        guessesLeftTextView.setText(hangmanGame.getGuessesLeft());
+        //TODO: Set text of used guesses.
+
     }
 
     public void userGuess() {
+        char c = editText.getText().toString().charAt(0);
+
+        if(hangmanGame.addUserGuesses(c)) {
+            guessSuccess(c);
+        } else {
+            guessFailed(c);
+        }
+    }
+
+    private void guessFailed(char c) {
+
+    }
+
+    private void guessSuccess(char c) {
     }
 }

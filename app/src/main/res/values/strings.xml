@@ -6,4 +6,6 @@
     <string name="startscreen_title_text">Huvudmeny</string>
     <string name="user_guess_hint_text">Vad är din gissning?</string>
     <string name="guess_button_text">Gissa!</string>
+    <string name="guesses_left_label">Gissningar kvar:</string>
+    <string name="wrong_guesses_label">Felaktiga svar:</string>
 </resources>

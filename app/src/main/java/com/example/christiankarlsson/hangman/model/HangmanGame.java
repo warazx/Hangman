@@ -34,7 +34,7 @@ public class HangmanGame {
         return userGuesses;
     }
 
-    public String getGuessesLeft() {
+    public String getGuessesLeftAsString() {
         return "" + guessesLeft;
     }
 
@@ -52,6 +52,10 @@ public class HangmanGame {
 
     public String getMaskedSecretWord() {
         return maskedWord;
+    }
+
+    public int getGuessesLeft() {
+        return guessesLeft;
     }
 
     public String getFormattedMaskedSecretWord() {

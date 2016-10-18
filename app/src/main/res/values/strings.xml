@@ -9,4 +9,5 @@
     <string name="guesses_left_label">Gissningar kvar:</string>
     <string name="wrong_guesses_label">Felaktiga svar:</string>
     <string name="error_fail_input">Felaktig gissning</string>
+    <string name="error_char_used">Character already used!</string>
 </resources>

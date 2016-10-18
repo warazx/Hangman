@@ -20,7 +20,10 @@
         android:layout_alignParentBottom="true"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
-        android:layout_toLeftOf="@+id/guess_button"/>
+        android:layout_toLeftOf="@+id/guess_button"
+        android:selectAllOnFocus="true"
+        android:maxLength="1"
+        android:digits="abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ"/>
 
     <Button
         android:text="@string/guess_button_text"

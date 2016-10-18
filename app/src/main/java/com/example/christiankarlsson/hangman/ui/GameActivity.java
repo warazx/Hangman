@@ -3,6 +3,7 @@ package com.example.christiankarlsson.hangman.ui;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
@@ -42,22 +43,14 @@ public class GameActivity extends AppCompatActivity {
         secretWordTextView.setText(hangmanGame.getFormattedMaskedSecretWord());
     }
 
-    public void userGuess() {
+    public void userGuess(View view) {
         char c = editText.getText().toString().charAt(0);
 
         if(hangmanGame.addUserGuesses(c)) {
-            guessSuccess(c);
+            updateView();
         } else {
-            guessFailed(c);
+            Toast.makeText(this, "ERROR", Toast.LENGTH_SHORT);
         }
-    }
-
-    private void guessSuccess(char c) {
-
-    }
-
-    private void guessFailed(char c) {
-
     }
 
 

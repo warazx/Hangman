@@ -61,21 +61,25 @@ public class HangmanGame {
         c = Character.toUpperCase(c);
         for(char used : userGuesses) {
             if(used == c) {
-                //matchSecretWord(c);
                 return false;
             }
         }
         userGuesses.add(c);
+        matchSecretWord(c);
         return true;
     }
 
-    /*private boolean matchSecretWord(char c) {
+    private void matchSecretWord(char c) {
+        boolean inWord = false;
         for(int i = 0; i < secretWord.length(); i++) {
             if(secretWord.charAt(i) == c) {
-
+                maskedWord = maskedWord.substring(0,i) + c + maskedWord.substring(i+1);
+                inWord = true;
             }
         }
-    }*/
+        if(!inWord) guessesLeft--;
+    }
+
 
     public String getUsedGuesses() {
         String str = "";

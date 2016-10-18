@@ -26,20 +26,12 @@ public class HangmanGame {
         return secretWord;
     }
 
-    public void setSecretWord(String secretWord) {
-        this.secretWord = secretWord;
-    }
-
     public ArrayList<Character> getUserGuesses() {
         return userGuesses;
     }
 
     public String getGuessesLeftAsString() {
         return "" + guessesLeft;
-    }
-
-    public void setUsedGuesses(int guessesLeft) {
-        this.guessesLeft = guessesLeft;
     }
 
     private String generateMaskedWord(String s) {
@@ -110,5 +102,9 @@ public class HangmanGame {
 
     public boolean noGuessesLeft() {
         return (guessesLeft == 0);
+    }
+
+    public int getGuessesUsed() {
+        return MAX_GUESSES - guessesLeft+1;
     }
 }

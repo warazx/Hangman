@@ -55,7 +55,12 @@ public class GameActivity extends AppCompatActivity {
             char c = editText.getText().toString().charAt(0);
             if(hangmanGame.addUserGuesses(c)) {
                 if(hangmanGame.hasWon()) {
+                    Bundle bundle = new Bundle();
+                    bundle.putString("SECRET_WORD", hangmanGame.getSecretWord());
+                    bundle.putInt("GUESSES_USED", hangmanGame.getGuessesUsed());
+                    bundle.putInt("GUESSES_LEFT", hangmanGame.getGuessesLeft());
                     Intent intent = new Intent(this, WonActivity.class);
+                    intent.putExtras(bundle);
                     startActivity(intent);
                 } else if(hangmanGame.noGuessesLeft()) {
                     Intent intent = new Intent(this, LoseActivity.class);

@@ -10,11 +10,9 @@ public class GenerateRandomWord {
             "banan",
             "fluga",
             "chips",
-            "mjölk",
             "säng",
             "dvala",
             "riddare",
-            "stålull",
             "maskerad"
     };
 

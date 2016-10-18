@@ -51,6 +51,9 @@ public class GameActivity extends AppCompatActivity {
                 if(hangmanGame.hasWon()) {
                     Intent intent = new Intent(this, WonActivity.class);
                     startActivity(intent);
+                } else if(hangmanGame.noGuessesLeft()) {
+                    Intent intent = new Intent(this, LoseActivity.class);
+                    startActivity(intent);
                 }
                 updateView();
             } else {

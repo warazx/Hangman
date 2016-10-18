@@ -37,7 +37,7 @@
         android:layout_height="wrap_content"
         android:layout_below="@+id/secret_word_text"
         android:paddingTop="30dp"
-        android:textSize="24dp"
+        android:textSize="18dp"
         android:id="@+id/guess_left_label" />
 
     <TextView
@@ -46,7 +46,7 @@
         android:layout_toRightOf="@id/guess_left_label"
         android:layout_alignBottom="@id/guess_left_label"
         android:paddingLeft="10dp"
-        android:textSize="24dp"
+        android:textSize="18dp"
         android:layout_marginTop="140dp"
         android:id="@+id/guess_left_text" />
 
@@ -55,16 +55,16 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@id/guess_left_label"
-        android:textSize="24dp"
+        android:textSize="18dp"
         android:id="@+id/wrong_guesses_label" />
 
     <TextView
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_toRightOf="@id/guess_left_label"
         android:layout_alignBottom="@id/wrong_guesses_label"
         android:paddingLeft="10dp"
-        android:textSize="24dp"
+        android:textSize="18dp"
         android:layout_below="@id/guess_left_label"
         android:id="@+id/used_guesses_text" />
 

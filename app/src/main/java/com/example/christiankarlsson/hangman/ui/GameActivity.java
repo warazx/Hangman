@@ -1,5 +1,6 @@
 package com.example.christiankarlsson.hangman.ui;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
@@ -39,7 +40,7 @@ public class GameActivity extends AppCompatActivity {
 
     private void updateView() {
         guessesLeftTextView.setText(hangmanGame.getGuessesLeft());
-        usedGuessesTextView.setText(hangmanGame.getUsedGuesses());
+        usedGuessesTextView.setText(hangmanGame.getWrongGuesses());
         secretWordTextView.setText(hangmanGame.getFormattedMaskedSecretWord());
     }
 
@@ -47,10 +48,15 @@ public class GameActivity extends AppCompatActivity {
         char c = editText.getText().toString().charAt(0);
 
         if(hangmanGame.addUserGuesses(c)) {
+            if(hangmanGame.hasWon()) {
+                Intent intent = new Intent(this, WonActivity.class);
+                startActivity(intent);
+            }
             updateView();
         } else {
-            Toast.makeText(this, "ERROR", Toast.LENGTH_SHORT);
+            Toast.makeText(this, R.string.error_fail_input, Toast.LENGTH_SHORT).show();
         }
+        editText.setText("");
     }
 
 

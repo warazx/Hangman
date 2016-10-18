@@ -8,4 +8,5 @@
     <string name="guess_button_text">Gissa!</string>
     <string name="guesses_left_label">Gissningar kvar:</string>
     <string name="wrong_guesses_label">Felaktiga svar:</string>
+    <string name="error_fail_input">Felaktig gissning</string>
 </resources>

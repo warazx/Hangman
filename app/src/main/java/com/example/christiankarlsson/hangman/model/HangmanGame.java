@@ -7,12 +7,14 @@ public class HangmanGame {
     private String secretWord;
     private String maskedWord;
     private ArrayList<Character> userGuesses;
+    private ArrayList<Character> wrongGuesses;
     private int guessesLeft;
 
     public HangmanGame() {
         secretWord = "BANAN";
         maskedWord = generateMaskedWord(secretWord);
         userGuesses = new ArrayList<>();
+        wrongGuesses = new ArrayList<>();
         guessesLeft = MAX_GUESSES;
     }
 
@@ -69,6 +71,10 @@ public class HangmanGame {
         return true;
     }
 
+    public boolean hasWon() {
+        return (maskedWord.equals(secretWord));
+    }
+
     private void matchSecretWord(char c) {
         boolean inWord = false;
         for(int i = 0; i < secretWord.length(); i++) {
@@ -77,14 +83,16 @@ public class HangmanGame {
                 inWord = true;
             }
         }
-        if(!inWord) guessesLeft--;
+        if(!inWord) {
+            wrongGuesses.add(c);
+            guessesLeft--;
+        }
     }
 
-
-    public String getUsedGuesses() {
+    public String getWrongGuesses() {
         String str = "";
-        if(userGuesses.size() != 0) {
-            for(char c : userGuesses) {
+        if(wrongGuesses.size() != 0) {
+            for(char c : wrongGuesses) {
                 str += c + ", ";
             }
             str = str.substring(0,str.length()-2);

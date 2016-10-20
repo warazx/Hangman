@@ -11,4 +11,5 @@
     <string name="error_fail_input">Du måste gissa något!</string>
     <string name="error_char_used">Det har du redan gissat! </string>
     <string name="victory_text">Du gissade rätt!</string>
+    <string name="back_to_menu_text">Gå tillbaka till huvudmenyn</string>
 </resources>

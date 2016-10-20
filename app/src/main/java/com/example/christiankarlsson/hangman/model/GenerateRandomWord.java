@@ -8,12 +8,12 @@ public class GenerateRandomWord {
 
     private static String[] words = {
             "banan",
-            "fluga",
+            /*"fluga",
             "chips",
             "säng",
             "dvala",
             "riddare",
-            "maskerad"
+            "maskerad"*/
     };
 
     public static String getWord() {

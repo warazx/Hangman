@@ -39,4 +39,14 @@
         android:paddingTop="20dp"
         android:id="@+id/secret_word_text" />
 
+    <Button
+        android:text="@string/back_to_menu_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/secret_word_text"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="13dp"
+        android:id="@+id/returnToStartButton"
+        android:onClick="returnToMenu"/>
+
 </RelativeLayout>

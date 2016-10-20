@@ -28,7 +28,8 @@
         android:textSize="30sp"
         android:layout_below="@+id/text_view"
         android:textAllCaps="false"
-        android:onClick="startGame"/>
+        android:onClick="startGame"
+        android:background="@drawable/bg_gradient"/>
 
     <Button
         android:text="@string/main_about_btn_text"
@@ -39,7 +40,8 @@
         android:textSize="30sp"
         android:layout_below="@+id/button1"
         android:textAllCaps="false"
-        android:onClick="aboutApp"/>
+        android:onClick="aboutApp"
+        android:background="@drawable/bg_gradient"/>
 
     <Button
         android:text="@string/main_library_btn_text"
@@ -50,7 +52,8 @@
         android:textSize="30sp"
         android:layout_below="@+id/button2"
         android:textAllCaps="false"
-        android:onClick="showLibrary"/>
+        android:onClick="showLibrary"
+        android:background="@drawable/bg_gradient"/>
 
 
 

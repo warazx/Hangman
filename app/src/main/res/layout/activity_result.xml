@@ -47,6 +47,7 @@
         android:layout_centerHorizontal="true"
         android:layout_marginTop="15dp"
         android:id="@+id/returnToStartButton"
-        android:onClick="returnToMenu"/>
+        android:onClick="returnToMenu"
+        android:background="@drawable/bg_gradient"/>
 
 </RelativeLayout>

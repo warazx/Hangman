@@ -28,13 +28,13 @@ public class ResultActivity extends AppCompatActivity {
 
         victoryText = (TextView) findViewById(R.id.victory_text);
         if(hangmanGame.getGuessesLeft() != 0) {
-            victoryText.setText(getString(R.string.victory_text, hangmanGame.getGuessesLeft()));
+            victoryText.setText(getString(R.string.result_victory_text, hangmanGame.getGuessesLeft()));
         } else {
-            victoryText.setText(getString(R.string.lose_text));
+            victoryText.setText(getString(R.string.result_lose_text));
         }
 
         secretWord = (TextView) findViewById(R.id.secret_word_text);
-        secretWord.setText(getString(R.string.secret_word, hangmanGame.getSecretWord()));
+        secretWord.setText(getString(R.string.result_secret_word_text, hangmanGame.getSecretWord()));
 
         hangImage = (ImageView) findViewById(R.id.hang_img);
         hangImage.setImageDrawable(ResourcesCompat.getDrawable(getResources(), GenerateHangImage.getImage(hangmanGame.getGuessesLeft()), null));

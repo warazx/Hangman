@@ -62,11 +62,11 @@ public class GameActivity extends AppCompatActivity {
                 }
                 updateView();
             } else {
-                Toast.makeText(this, R.string.error_char_used, Toast.LENGTH_SHORT).show();
+                Toast.makeText(this, R.string.error_char_used_text, Toast.LENGTH_SHORT).show();
             }
             editText.setText("");
         } catch (Exception e) {
-            Toast.makeText(this, R.string.error_fail_input, Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, R.string.error_fail_input_text, Toast.LENGTH_SHORT).show();
         }
     }
 

@@ -43,7 +43,7 @@
             android:layout_height="wrap_content">
 
             <TextView
-                android:text="@string/guesses_left_label"
+                android:text="@string/game_guesses_left_label"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/secret_word_text"
@@ -66,7 +66,7 @@
             android:layout_height="wrap_content">
 
             <TextView
-                android:text="@string/wrong_guesses_label"
+                android:text="@string/game_wrong_guesses_label"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:textSize="18dp"
@@ -93,7 +93,7 @@
             <EditText
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint="@string/user_guess_hint_text"
+                android:hint="@string/game_user_guess_hint_text"
                 android:id="@+id/user_guess_text"
                 android:inputType="textCapCharacters"
                 android:selectAllOnFocus="true"
@@ -102,7 +102,7 @@
                 android:digits="abcdefghijklmnopqrstuvwxyzåäöABCDEFGHIJKLMNOPQRSTUVWXYZÅÄÖ" />
 
             <Button
-                android:text="@string/guess_button_text"
+                android:text="@string/game_guess_button_text"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:id="@+id/guess_button"

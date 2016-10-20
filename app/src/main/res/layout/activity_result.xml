@@ -20,7 +20,7 @@
         android:id="@+id/hang_img" />
 
     <TextView
-        tools:text="@string/victory_text"
+        tools:text="@string/result_victory_text"
         android:textSize="32dp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -40,7 +40,7 @@
         android:id="@+id/secret_word_text" />
 
     <Button
-        android:text="@string/back_to_menu_text"
+        android:text="@string/result_back_to_menu_btn_text"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@+id/secret_word_text"

@@ -20,7 +20,7 @@
         android:id="@+id/text_view"/>
 
     <Button
-        android:text="@string/start_game_text"
+        android:text="@string/main_start_game_text"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/button1"
@@ -31,7 +31,7 @@
         android:onClick="startGame"/>
 
     <Button
-        android:text="@string/about_text"
+        android:text="@string/main_about_text"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/button2"

@@ -20,6 +20,7 @@
             android:windowSoftInputMode="adjustResize" />
         <activity android:name=".ui.AboutActivity" />
         <activity android:name=".ui.ResultActivity" />
+        <activity android:name=".ui.LibraryActivity"></activity>
     </application>
 
 </manifest>

@@ -25,4 +25,9 @@ public class MainActivity extends AppCompatActivity {
         startActivity(intent);
     }
 
+    public void showLibrary(View view) {
+        Intent intent = new Intent(this, LibraryActivity.class);
+        startActivity(intent);
+    }
+
 }

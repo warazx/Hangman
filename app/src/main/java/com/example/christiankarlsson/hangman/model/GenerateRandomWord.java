@@ -1,5 +1,6 @@
 package com.example.christiankarlsson.hangman.model;
 
+import java.util.Arrays;
 import java.util.Random;
 
 public class GenerateRandomWord {
@@ -13,10 +14,24 @@ public class GenerateRandomWord {
             "säng",
             "dvala",
             "riddare",
-            "maskerad"
+            "maskerad",
+            "kanin",
+            "robot",
+            "stålmannen",
+            "japan",
+            "fotboll",
+            "ros",
+            "julgran",
+            "rike",
+            "stövel"
     };
 
     public static String getWord() {
         return words[rand.nextInt(words.length)];
+    }
+
+    public static String[] getAll() {
+        Arrays.sort(words);
+        return words;
     }
 }

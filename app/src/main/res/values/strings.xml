@@ -17,4 +17,6 @@
     <string name="result_secret_word_text">Det hemliga ordet var: %s</string>
     <string name="about_made_by_text">Made by:\nChristian Karlsson</string>
     <string name="about_info_text">Du har 10 gissningar på dig att lista ut det maskerade ordet innan du blir hängd!</string>
+    <string name="library_no_words_found">Hittar inga ord!</string>
+    <string name="main_library_btn_text">Bibliotek</string>
 </resources>

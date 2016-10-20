@@ -25,7 +25,7 @@
         android:layout_height="wrap_content"
         android:id="@+id/button1"
         android:layout_marginTop="10dp"
-        android:textSize="30dp"
+        android:textSize="30sp"
         android:layout_below="@+id/text_view"
         android:textAllCaps="false"
         android:onClick="startGame"/>
@@ -36,10 +36,21 @@
         android:layout_height="wrap_content"
         android:id="@+id/button2"
         android:layout_marginTop="10dp"
-        android:textSize="30dp"
+        android:textSize="30sp"
         android:layout_below="@+id/button1"
         android:textAllCaps="false"
         android:onClick="aboutApp"/>
+
+    <Button
+        android:text="@string/main_library_btn_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/button3"
+        android:layout_marginTop="10dp"
+        android:textSize="30sp"
+        android:layout_below="@+id/button2"
+        android:textAllCaps="false"
+        android:onClick="showLibrary"/>
 
 
 

@@ -1,11 +1,11 @@
 <resources>
     <string name="app_name">Hangman</string>
     <string name="action_settings">Settings</string>
-    <string name="main_start_game_text">Starta spel</string>
-    <string name="main_about_text">Om</string>
+    <string name="main_startgame_btn_text">Starta spel</string>
+    <string name="main_about_btn_text">Om</string>
     <string name="main_title_text">Huvudmeny</string>
     <string name="game_user_guess_hint_text">Vad är din gissning?</string>
-    <string name="game_guess_button_text">Gissa!</string>
+    <string name="game_guess_btn_text">Gissa!</string>
     <string name="game_guesses_left_label">Gissningar kvar:</string>
     <string name="game_wrong_guesses_label">Felaktiga svar:</string>
     <string name="error_fail_input_text">Du måste gissa något!</string>

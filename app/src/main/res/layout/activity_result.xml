@@ -21,7 +21,7 @@
 
     <TextView
         tools:text="@string/result_victory_text"
-        android:textSize="32dp"
+        android:textSize="18dp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
@@ -30,13 +30,13 @@
         android:id="@+id/victory_text" />
 
     <TextView
-        tools:text="SECRETWORD"
-        android:textSize="32dp"
+        tools:text="@string/result_secret_word_text"
+        android:textSize="18dp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
         android:layout_below="@id/victory_text"
-        android:paddingTop="20dp"
+        android:paddingTop="15dp"
         android:id="@+id/secret_word_text" />
 
     <Button
@@ -45,7 +45,7 @@
         android:layout_height="wrap_content"
         android:layout_below="@+id/secret_word_text"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="13dp"
+        android:layout_marginTop="15dp"
         android:id="@+id/returnToStartButton"
         android:onClick="returnToMenu"/>
 

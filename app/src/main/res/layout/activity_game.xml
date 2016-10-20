@@ -102,7 +102,7 @@
                 android:digits="abcdefghijklmnopqrstuvwxyzåäöABCDEFGHIJKLMNOPQRSTUVWXYZÅÄÖ" />
 
             <Button
-                android:text="@string/game_guess_button_text"
+                android:text="@string/game_guess_btn_text"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:id="@+id/guess_button"

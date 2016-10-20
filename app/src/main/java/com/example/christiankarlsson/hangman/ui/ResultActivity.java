@@ -27,7 +27,9 @@ public class ResultActivity extends AppCompatActivity {
         HangmanGame hangmanGame = data.getParcelable("GAME_DATA");
 
         victoryText = (TextView) findViewById(R.id.victory_text);
-        if(hangmanGame.getGuessesLeft() != 0) {
+        if(hangmanGame.getGuessesLeft() == 1) {
+            victoryText.setText(getString(R.string.result_victory_text_1left));
+        } else if(hangmanGame.getGuessesLeft() != 0) {
             victoryText.setText(getString(R.string.result_victory_text, hangmanGame.getGuessesLeft()));
         } else {
             victoryText.setText(getString(R.string.result_lose_text));
@@ -41,6 +43,15 @@ public class ResultActivity extends AppCompatActivity {
     }
 
     public void returnToMenu(View view) {
+        goToStart();
+    }
+
+    @Override
+    public void onBackPressed() {
+        goToStart();
+    }
+
+    private void goToStart() {
         Intent intent = new Intent (this, MainActivity.class);
         intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
         startActivity(intent);

@@ -12,6 +12,9 @@
     <string name="error_char_used_text">Det har du redan gissat! </string>
     <string name="result_back_to_menu_btn_text">Gå tillbaka till huvudmenyn</string>
     <string name="result_victory_text">Du gissade rätt, med %d gissningar kvar!</string>
+    <string name="result_victory_text_1left">Du gissade rätt, med 1 gissning kvar!</string>
     <string name="result_lose_text">Du blev hängd!</string>
     <string name="result_secret_word_text">Det hemliga ordet var: %s</string>
+    <string name="about_made_by_text">Made by:\nChristian Karlsson</string>
+    <string name="about_info_text">Du har 10 gissningar på dig att lista ut det maskerade ordet innan du blir hängd!</string>
 </resources>

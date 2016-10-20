@@ -1,9 +1,5 @@
 package com.example.christiankarlsson.hangman.model;
 
-import android.content.Intent;
-
-import com.example.christiankarlsson.hangman.ui.LoseActivity;
-
 import java.util.ArrayList;
 
 public class HangmanGame {
@@ -71,8 +67,8 @@ public class HangmanGame {
         return true;
     }
 
-    public boolean hasWon() {
-        return (maskedWord.equals(secretWord));
+    public boolean isGameOver() {
+        return (maskedWord.equals(secretWord) || guessesLeft == 0);
     }
 
     private void matchSecretWord(char c) {
@@ -98,10 +94,6 @@ public class HangmanGame {
             str = str.substring(0,str.length()-2);
         }
         return str;
-    }
-
-    public boolean noGuessesLeft() {
-        return (guessesLeft == 0);
     }
 
     public int getGuessesUsed() {

@@ -7,7 +7,7 @@ import android.widget.TextView;
 
 import com.example.christiankarlsson.hangman.R;
 
-public class WonActivity extends AppCompatActivity {
+public class ResultActivity extends AppCompatActivity {
 
     private TextView secretWord;
     private ImageView hangImage;
@@ -15,7 +15,7 @@ public class WonActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_won);
+        setContentView(R.layout.activity_result);
 
         secretWord = (TextView) findViewById(R.id.secret_word_text);
         secretWord.setText(getIntent().getExtras().getString("SECRET_WORD"));

@@ -1,7 +1,6 @@
 package com.example.christiankarlsson.hangman.ui;
 
 import android.content.Intent;
-import android.support.v4.content.ContextCompat;
 import android.support.v4.content.res.ResourcesCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -54,16 +53,13 @@ public class GameActivity extends AppCompatActivity {
         try {
             char c = editText.getText().toString().charAt(0);
             if(hangmanGame.addUserGuesses(c)) {
-                if(hangmanGame.hasWon()) {
+                if(hangmanGame.isGameOver()) {
                     Bundle bundle = new Bundle();
                     bundle.putString("SECRET_WORD", hangmanGame.getSecretWord());
                     bundle.putInt("GUESSES_USED", hangmanGame.getGuessesUsed());
                     bundle.putInt("GUESSES_LEFT", hangmanGame.getGuessesLeft());
-                    Intent intent = new Intent(this, WonActivity.class);
+                    Intent intent = new Intent(this, ResultActivity.class);
                     intent.putExtras(bundle);
-                    startActivity(intent);
-                } else if(hangmanGame.noGuessesLeft()) {
-                    Intent intent = new Intent(this, LoseActivity.class);
                     startActivity(intent);
                 }
                 updateView();

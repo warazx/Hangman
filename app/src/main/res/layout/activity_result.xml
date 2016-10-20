@@ -20,7 +20,7 @@
         android:id="@+id/hang_img" />
 
     <TextView
-        android:text="@string/victory_text"
+        tools:text="@string/victory_text"
         android:textSize="32dp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -30,7 +30,7 @@
         android:id="@+id/victory_text" />
 
     <TextView
-        android:text="SECRETWORD"
+        tools:text="SECRETWORD"
         android:textSize="32dp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"

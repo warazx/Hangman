@@ -1,8 +1,11 @@
 package com.example.christiankarlsson.hangman.model;
 
+import android.os.Parcel;
+import android.os.Parcelable;
+
 import java.util.ArrayList;
 
-public class HangmanGame {
+public class HangmanGame implements Parcelable {
     private static final int MAX_GUESSES = 10;
     private String secretWord;
     private String maskedWord;
@@ -96,7 +99,29 @@ public class HangmanGame {
         return str;
     }
 
-    public int getGuessesUsed() {
-        return MAX_GUESSES - guessesLeft+1;
+    @Override
+    public int describeContents() {
+        return 0;
+    }
+
+    @Override
+    public void writeToParcel(Parcel dest, int flags) {
+        dest.writeString(secretWord);
+        dest.writeInt(guessesLeft);
+    }
+
+    public static final Parcelable.Creator<HangmanGame> CREATOR = new Parcelable.Creator<HangmanGame>() {
+        public HangmanGame createFromParcel(Parcel in) {
+            return new HangmanGame(in);
+        }
+
+        public HangmanGame[] newArray(int size) {
+            return new HangmanGame[size];
+        }
+    };
+
+    private HangmanGame(Parcel in) {
+        secretWord = in.readString();
+        guessesLeft = in.readInt();
     }
 }

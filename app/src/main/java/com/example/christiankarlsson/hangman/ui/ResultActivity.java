@@ -1,6 +1,7 @@
 package com.example.christiankarlsson.hangman.ui;
 
 import android.content.Intent;
+import android.support.v4.content.res.ResourcesCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -8,9 +9,12 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.example.christiankarlsson.hangman.R;
+import com.example.christiankarlsson.hangman.model.GenerateHangImage;
+import com.example.christiankarlsson.hangman.model.HangmanGame;
 
 public class ResultActivity extends AppCompatActivity {
 
+    private TextView victoryText;
     private TextView secretWord;
     private ImageView hangImage;
 
@@ -19,10 +23,21 @@ public class ResultActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_result);
 
+        Bundle data = getIntent().getExtras();
+        HangmanGame hangmanGame = data.getParcelable("GAME_DATA");
+
+        victoryText = (TextView) findViewById(R.id.victory_text);
+        if(hangmanGame.getGuessesLeft() != 0) {
+            victoryText.setText(getString(R.string.victory_text, hangmanGame.getGuessesLeft()));
+        } else {
+            victoryText.setText(getString(R.string.lose_text));
+        }
+
         secretWord = (TextView) findViewById(R.id.secret_word_text);
-        secretWord.setText(getIntent().getExtras().getString("SECRET_WORD"));
+        secretWord.setText(getString(R.string.secret_word, hangmanGame.getSecretWord()));
 
         hangImage = (ImageView) findViewById(R.id.hang_img);
+        hangImage.setImageDrawable(ResourcesCompat.getDrawable(getResources(), GenerateHangImage.getImage(hangmanGame.getGuessesLeft()), null));
     }
 
     public void returnToMenu(View view) {

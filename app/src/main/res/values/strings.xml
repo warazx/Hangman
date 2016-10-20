@@ -10,6 +10,8 @@
     <string name="wrong_guesses_label">Felaktiga svar:</string>
     <string name="error_fail_input">Du måste gissa något!</string>
     <string name="error_char_used">Det har du redan gissat! </string>
-    <string name="victory_text">Du gissade rätt!</string>
+    <string name="victory_text">Du gissade rätt, med %d gissningar kvar!</string>
     <string name="back_to_menu_text">Gå tillbaka till huvudmenyn</string>
+    <string name="lose_text">Du blev hängd!</string>
+    <string name="secret_word">Det hemliga ordet var: %s</string>
 </resources>

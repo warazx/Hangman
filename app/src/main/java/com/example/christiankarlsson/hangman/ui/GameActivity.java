@@ -17,6 +17,8 @@ import com.example.christiankarlsson.hangman.model.HangmanGame;
 
 public class GameActivity extends AppCompatActivity {
 
+    public static final String GAME_DATA = "GAME_DATA";
+
     private EditText editText;
     private Button button;
     private TextView guessesLeftTextView;
@@ -54,12 +56,8 @@ public class GameActivity extends AppCompatActivity {
             char c = editText.getText().toString().charAt(0);
             if(hangmanGame.addUserGuesses(c)) {
                 if(hangmanGame.isGameOver()) {
-                    Bundle bundle = new Bundle();
-                    bundle.putString("SECRET_WORD", hangmanGame.getSecretWord());
-                    bundle.putInt("GUESSES_USED", hangmanGame.getGuessesUsed());
-                    bundle.putInt("GUESSES_LEFT", hangmanGame.getGuessesLeft());
                     Intent intent = new Intent(this, ResultActivity.class);
-                    intent.putExtras(bundle);
+                    intent.putExtra(GAME_DATA, hangmanGame);
                     startActivity(intent);
                 }
                 updateView();

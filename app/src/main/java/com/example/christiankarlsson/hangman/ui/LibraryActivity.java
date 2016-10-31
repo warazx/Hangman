@@ -3,6 +3,7 @@ package com.example.christiankarlsson.hangman.ui;
 import android.app.ListActivity;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.Menu;
 import android.widget.ArrayAdapter;
 
 import com.example.christiankarlsson.hangman.R;
@@ -18,5 +19,11 @@ public class LibraryActivity extends ListActivity {
         String[] allWords = GenerateRandomWord.getAll();
         ArrayAdapter<String> adapter = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, allWords);
         setListAdapter(adapter);
+    }
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        getMenuInflater().inflate(R.menu.actionbar_main_menu, menu);
+        return true;
     }
 }

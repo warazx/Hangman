@@ -19,4 +19,8 @@
     <string name="about_info_text">Du har 10 gissningar på dig att lista ut det maskerade ordet innan du blir hängd!</string>
     <string name="library_no_words_found">Hittar inga ord!</string>
     <string name="main_library_btn_text">Bibliotek</string>
+    <string name="main_menu_text">Huvudmeny</string>
+    <string name="result_label">Resultat</string>
+    <string name="about_label">Om</string>
+    <string name="library_label">Bibliotek</string>
 </resources>

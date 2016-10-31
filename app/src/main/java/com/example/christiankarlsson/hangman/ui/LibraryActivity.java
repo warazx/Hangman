@@ -20,10 +20,4 @@ public class LibraryActivity extends ListActivity {
         ArrayAdapter<String> adapter = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, allWords);
         setListAdapter(adapter);
     }
-
-    @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        getMenuInflater().inflate(R.menu.actionbar_main_menu, menu);
-        return true;
-    }
 }

@@ -5,10 +5,10 @@
     <application
         android:allowBackup="true"
         android:supportsRtl="true"
-        android:theme="@style/AppTheme">
+        android:theme="@style/AppTheme"
+        android:label="@string/menu_main_title">
         <activity
-            android:name=".ui.MainActivity"
-            android:label="@string/main_menu_text">
+            android:name=".ui.MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -17,17 +17,13 @@
         </activity>
         <activity
             android:name=".ui.GameActivity"
-            android:windowSoftInputMode="adjustResize"
-            android:label="@string/app_name"/>
+            android:windowSoftInputMode="adjustResize"/>
         <activity
-            android:name=".ui.AboutActivity"
-            android:label="@string/about_label"/>
+            android:name=".ui.AboutActivity"/>
         <activity
-            android:name=".ui.ResultActivity"
-            android:label="@string/result_label"/>
+            android:name=".ui.ResultActivity"/>
         <activity
-            android:name=".ui.LibraryActivity"
-            android:label="@string/library_label"/>
+            android:name=".ui.LibraryActivity"/>
     </application>
 
 </manifest>

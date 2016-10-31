@@ -7,7 +7,7 @@ public class GenerateRandomWord {
 
     private static Random rand = new Random();
 
-    private static String[] words = {
+    /*private static String[] words = {
             "banan",
             "fluga",
             "chips",
@@ -24,6 +24,12 @@ public class GenerateRandomWord {
             "julgran",
             "rike",
             "stövel"
+    };*/
+
+    private static String[] words = {
+            "banan",
+            "ö",
+            "ddd"
     };
 
     public static String getWord() {

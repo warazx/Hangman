@@ -56,6 +56,24 @@ public class GameActivity extends AppCompatActivity {
         return true;
     }
 
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        int id = item.getItemId();
+        Intent intent;
+        switch (id) {
+            case R.id.startgame_btn:
+                intent = new Intent(this, GameActivity.class);
+                break;
+            case R.id.aboutgame_btn:
+                intent = new Intent(this, AboutActivity.class);
+                break;
+            default:
+                intent = new Intent(this, null);
+        }
+        startActivity(intent);
+        return super.onOptionsItemSelected(item);
+    }
+
     private void updateView() {
         guessesLeftTextView.setText(hangmanGame.getGuessesLeftAsString());
         usedGuessesTextView.setText(hangmanGame.getWrongGuesses());

@@ -17,13 +17,33 @@
         </activity>
         <activity
             android:name=".ui.GameActivity"
-            android:windowSoftInputMode="adjustResize"/>
+            android:windowSoftInputMode="adjustResize">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.christiankarlsson.hangman.ui.MainActivity">
+            </meta-data>
+        </activity>
         <activity
-            android:name=".ui.AboutActivity"/>
+            android:name=".ui.AboutActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.christiankarlsson.hangman.ui.MainActivity">
+            </meta-data>
+        </activity>
         <activity
-            android:name=".ui.ResultActivity"/>
+            android:name=".ui.ResultActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.christiankarlsson.hangman.ui.MainActivity">
+            </meta-data>
+        </activity>
         <activity
-            android:name=".ui.LibraryActivity"/>
+            android:name=".ui.LibraryActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.christiankarlsson.hangman.ui.MainActivity">
+            </meta-data>
+        </activity>
     </application>
 
 </manifest>

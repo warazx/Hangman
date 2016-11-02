@@ -19,8 +19,6 @@ import com.example.christiankarlsson.hangman.model.HangmanGame;
 
 public class GameActivity extends AppCompatActivity {
 
-    public static final String GAME_DATA = "GAME_DATA";
-
     private EditText editText;
     private Button button;
     private TextView guessesLeftTextView;

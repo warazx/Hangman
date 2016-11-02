@@ -111,30 +111,4 @@ public class HangmanGame /*implements Parcelable*/ {
         }
         return str;
     }
-
-    /*@Override
-    public int describeContents() {
-        return 0;
-    }
-
-    @Override
-    public void writeToParcel(Parcel dest, int flags) {
-        dest.writeString(secretWord);
-        dest.writeInt(guessesLeft);
-    }
-
-    public static final Parcelable.Creator<HangmanGame> CREATOR = new Parcelable.Creator<HangmanGame>() {
-        public HangmanGame createFromParcel(Parcel in) {
-            return new HangmanGame(in);
-        }
-
-        public HangmanGame[] newArray(int size) {
-            return new HangmanGame[size];
-        }
-    };
-
-    private HangmanGame(Parcel in) {
-        secretWord = in.readString();
-        guessesLeft = in.readInt();
-    }*/
 }

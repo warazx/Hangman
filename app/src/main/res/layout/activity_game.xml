@@ -9,7 +9,67 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
+    android:background="@drawable/bg_gradient"
     tools:context="com.example.christiankarlsson.hangman.ui.GameActivity">
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/top_line">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1.2">
+
+            <TextView
+                android:text="@string/game_wrong_guesses_label"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="18dp"
+                android:id="@+id/wrong_guesses_label" />
+
+            <TextView
+                tools:text="A, B, C"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/used_guesses_text"/>
+
+        </LinearLayout>
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:srcCompat="@drawable/hang10"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:id="@+id/hang_img"
+            android:layout_weight="1" />
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1.2">
+
+            <TextView
+                android:text="@string/game_guesses_left_label"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/secret_word_text"
+                android:textSize="18dp"
+                android:id="@+id/guess_left_label" />
+
+            <TextView
+                tools:text="10"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="18dp"
+                android:id="@+id/guess_left_text" />
+        </LinearLayout>
+    </LinearLayout>
 
     <TextView
         tools:text="S E C R E T W O R D"
@@ -17,17 +77,9 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
-        android:layout_below="@+id/hang_img"
+        android:layout_below="@id/top_line"
         android:paddingTop="20dp"
         android:id="@+id/secret_word_text" />
-
-    <ImageView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:srcCompat="@drawable/hang10"
-        android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true"
-        android:id="@+id/hang_img" />
 
     <LinearLayout
         android:orientation="vertical"
@@ -37,58 +89,15 @@
         android:layout_marginTop="10dp"
         android:id="@+id/top_text">
 
-        <LinearLayout
-            android:orientation="horizontal"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content">
-
-            <TextView
-                android:text="@string/game_guesses_left_label"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_below="@+id/secret_word_text"
-                android:textSize="18dp"
-                android:id="@+id/guess_left_label"
-                android:layout_weight="1" />
-
-            <TextView
-                tools:text="10"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:textSize="18dp"
-                android:id="@+id/guess_left_text"
-                android:layout_weight="0.7" />
-        </LinearLayout>
-
-        <LinearLayout
-            android:orientation="horizontal"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content">
-
-            <TextView
-                android:text="@string/game_wrong_guesses_label"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:textSize="18dp"
-                android:id="@+id/wrong_guesses_label"
-                android:layout_weight="1" />
-
-            <TextView
-                tools:text="A, B, C"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:id="@+id/used_guesses_text"
-                android:layout_weight="0.7" />
-
-        </LinearLayout>
-
     </LinearLayout>
 
     <LinearLayout
         android:orientation="horizontal"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true">
+        android:layout_alignParentBottom="true"
+        android:layout_below="@id/secret_word_text"
+        android:gravity="bottom">
 
             <EditText
                 android:layout_width="match_parent"
@@ -108,7 +117,7 @@
                 android:id="@+id/guess_button"
                 android:layout_weight="1"
                 android:onClick="userGuess"
-                android:background="@drawable/bg_gradient"/>
+                android:background="@drawable/bg_btn"/>
 
     </LinearLayout>
 

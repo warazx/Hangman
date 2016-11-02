@@ -9,6 +9,7 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
+    android:background="@drawable/bg_gradient"
     tools:context="com.example.christiankarlsson.hangman.ui.ResultActivity">
 
     <ImageView
@@ -48,6 +49,6 @@
         android:layout_marginTop="15dp"
         android:id="@+id/returnToStartButton"
         android:onClick="returnToMenu"
-        android:background="@drawable/bg_gradient"/>
+        android:background="@drawable/bg_btn"/>
 
 </RelativeLayout>

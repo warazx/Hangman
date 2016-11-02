@@ -98,9 +98,5 @@ public class GameActivity extends AppCompatActivity {
         } catch (Exception e) {
             Toast.makeText(this, R.string.error_fail_input_text, Toast.LENGTH_SHORT).show();
         }
-
-
     }
-
-
 }

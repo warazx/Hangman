@@ -88,7 +88,6 @@ public class GameActivity extends AppCompatActivity {
             if(hangmanGame.addUserGuesses(c)) {
                 if(hangmanGame.isGameOver()) {
                     Intent intent = new Intent(this, ResultActivity.class);
-                    //intent.putExtra(GAME_DATA, hangmanGame);
                     startActivity(intent);
                 }
                 updateView();

@@ -49,7 +49,7 @@ public class GameActivity extends AppCompatActivity {
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         getMenuInflater().inflate(R.menu.actionbar_main_menu, menu);
-        MenuItem item = menu.findItem(R.id.startgame_btn);
+        MenuItem item = menu.findItem(R.id.menu_startgame_btn);
         item.setVisible(false);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         getSupportActionBar().setTitle(R.string.app_name);
@@ -61,11 +61,14 @@ public class GameActivity extends AppCompatActivity {
         int id = item.getItemId();
         Intent intent;
         switch (id) {
-            case R.id.startgame_btn:
+            case (R.id.menu_startgame_btn):
                 intent = new Intent(this, GameActivity.class);
                 break;
-            case R.id.aboutgame_btn:
+            case (R.id.menu_aboutgame_btn):
                 intent = new Intent(this, AboutActivity.class);
+                break;
+            case (android.R.id.home):
+                intent = new Intent(this, MainActivity.class);
                 break;
             default:
                 intent = new Intent(this, null);
@@ -98,6 +101,8 @@ public class GameActivity extends AppCompatActivity {
         } catch (Exception e) {
             Toast.makeText(this, R.string.error_fail_input_text, Toast.LENGTH_SHORT).show();
         }
+
+
     }
 
 

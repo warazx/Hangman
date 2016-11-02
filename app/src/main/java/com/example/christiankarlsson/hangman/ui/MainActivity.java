@@ -30,10 +30,10 @@ public class MainActivity extends AppCompatActivity {
         int id = item.getItemId();
         Intent intent;
         switch (id) {
-            case R.id.startgame_btn:
+            case R.id.menu_startgame_btn:
                 intent = new Intent(this, GameActivity.class);
                 break;
-            case R.id.aboutgame_btn:
+            case R.id.menu_aboutgame_btn:
                 intent = new Intent(this, AboutActivity.class);
                 break;
             default:

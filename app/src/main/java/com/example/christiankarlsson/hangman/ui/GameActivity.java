@@ -34,7 +34,6 @@ public class GameActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_game);
 
-        HangmanGame.startNew();
         hangmanGame = HangmanGame.getGame();
 
         editText = (EditText) findViewById(R.id.user_guess_text);

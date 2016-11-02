@@ -15,7 +15,7 @@ public class HangmanGame /*implements Parcelable*/ {
         return game;
     }
 
-    public static void startNew() {
+    public void startNew() {
         game = new HangmanGame();
     }
 

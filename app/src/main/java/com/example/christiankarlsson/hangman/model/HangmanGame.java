@@ -1,11 +1,8 @@
 package com.example.christiankarlsson.hangman.model;
 
-import android.os.Parcel;
-import android.os.Parcelable;
-
 import java.util.ArrayList;
 
-public class HangmanGame /*implements Parcelable*/ {
+public class HangmanGame {
 
     private static HangmanGame game = null;
     public static HangmanGame getGame() {
@@ -25,6 +22,7 @@ public class HangmanGame /*implements Parcelable*/ {
     private ArrayList<Character> userGuesses;
     private ArrayList<Character> wrongGuesses;
     private int guessesLeft;
+    private boolean isPaused = false;
 
     public HangmanGame() {
         secretWord = GenerateRandomWord.getWord().toUpperCase();
@@ -81,6 +79,14 @@ public class HangmanGame /*implements Parcelable*/ {
         userGuesses.add(c);
         matchSecretWord(c);
         return true;
+    }
+
+    public void setPaused(boolean paused) {
+        isPaused = paused;
+    }
+
+    public boolean isPaused() {
+        return isPaused;
     }
 
     public boolean isGameOver() {

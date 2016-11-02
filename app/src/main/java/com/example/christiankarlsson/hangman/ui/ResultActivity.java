@@ -25,9 +25,8 @@ public class ResultActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_result);
 
-        Bundle data = getIntent().getExtras();
         HangmanGame hangmanGame = HangmanGame.getGame();
-        /*HangmanGame hangmanGame = data.getParcelable("GAME_DATA");*/
+        hangmanGame.setPaused(false);
 
         victoryText = (TextView) findViewById(R.id.victory_text);
         if(hangmanGame.getGuessesLeft() == 1) {
@@ -69,6 +68,8 @@ public class ResultActivity extends AppCompatActivity {
         switch (id) {
             case R.id.menu_startgame_btn:
                 intent = new Intent(this, GameActivity.class);
+                HangmanGame hangmanGame = HangmanGame.getGame();
+                hangmanGame.startNew();
                 break;
             case R.id.menu_aboutgame_btn:
                 intent = new Intent(this, AboutActivity.class);

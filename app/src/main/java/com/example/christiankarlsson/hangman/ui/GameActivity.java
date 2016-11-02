@@ -82,6 +82,18 @@ public class GameActivity extends AppCompatActivity {
         hangImage.setImageDrawable(ResourcesCompat.getDrawable(getResources(), GenerateHangImage.getImage(hangmanGame.getGuessesLeft()), null));
     }
 
+    @Override
+    protected void onPause() {
+        super.onPause();
+        hangmanGame.setPaused(true);
+    }
+
+    @Override
+    protected void onPostResume() {
+        super.onPostResume();
+        hangmanGame.setPaused(false);
+    }
+
     public void userGuess(View view) {
         try {
             char c = editText.getText().toString().charAt(0);
@@ -98,5 +110,7 @@ public class GameActivity extends AppCompatActivity {
         } catch (Exception e) {
             Toast.makeText(this, R.string.error_fail_input_text, Toast.LENGTH_SHORT).show();
         }
+
+
     }
 }

@@ -12,11 +12,25 @@
     tools:context="com.example.christiankarlsson.hangman.ui.MainActivity">
 
     <Button
+        android:text="@string/main_resume_btn_txt"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:id="@+id/btn_resumegame"
+        android:textSize="30sp"
+        android:textAllCaps="false"
+        android:visibility="gone"
+        android:onClick="resumeGame"
+        android:background="@drawable/bg_btn"/>
+
+    <Button
         android:text="@string/main_startgame_btn_text"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentLeft="true"
-        android:id="@+id/button1"
+        android:id="@+id/btn_startgame"
+        android:layout_below="@+id/btn_resumegame"
+        android:layout_marginTop="10dp"
         android:textSize="30sp"
         android:textAllCaps="false"
         android:onClick="startGame"
@@ -26,10 +40,10 @@
         android:text="@string/main_about_btn_text"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/button2"
+        android:id="@+id/btn_about"
         android:layout_marginTop="10dp"
         android:textSize="30sp"
-        android:layout_below="@+id/button1"
+        android:layout_below="@+id/btn_startgame"
         android:textAllCaps="false"
         android:onClick="aboutApp"
         android:background="@drawable/bg_btn"/>
@@ -38,10 +52,10 @@
         android:text="@string/main_library_btn_text"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/button3"
+        android:id="@+id/btn_library"
         android:layout_marginTop="10dp"
         android:textSize="30sp"
-        android:layout_below="@+id/button2"
+        android:layout_below="@+id/btn_about"
         android:textAllCaps="false"
         android:onClick="showLibrary"
         android:background="@drawable/bg_btn"/>

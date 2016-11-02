@@ -8,7 +8,9 @@
         android:theme="@style/AppTheme"
         android:label="@string/menu_main_title">
         <activity
-            android:name=".ui.MainActivity">
+            android:name=".ui.MainActivity"
+            android:configChanges="orientation"
+            android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -17,28 +19,36 @@
         </activity>
         <activity
             android:name=".ui.GameActivity"
-            android:windowSoftInputMode="adjustResize">
+            android:windowSoftInputMode="adjustResize"
+            android:configChanges="orientation"
+            android:screenOrientation="portrait">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.example.christiankarlsson.hangman.ui.MainActivity">
             </meta-data>
         </activity>
         <activity
-            android:name=".ui.AboutActivity">
+            android:name=".ui.AboutActivity"
+            android:configChanges="orientation"
+            android:screenOrientation="portrait">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.example.christiankarlsson.hangman.ui.MainActivity">
             </meta-data>
         </activity>
         <activity
-            android:name=".ui.ResultActivity">
+            android:name=".ui.ResultActivity"
+            android:configChanges="orientation"
+            android:screenOrientation="portrait">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.example.christiankarlsson.hangman.ui.MainActivity">
             </meta-data>
         </activity>
         <activity
-            android:name=".ui.LibraryActivity">
+            android:name=".ui.LibraryActivity"
+            android:configChanges="orientation"
+            android:screenOrientation="portrait">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.example.christiankarlsson.hangman.ui.MainActivity">

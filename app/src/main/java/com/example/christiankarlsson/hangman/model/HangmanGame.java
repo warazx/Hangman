@@ -5,7 +5,20 @@ import android.os.Parcelable;
 
 import java.util.ArrayList;
 
-public class HangmanGame implements Parcelable {
+public class HangmanGame /*implements Parcelable*/ {
+
+    private static HangmanGame game = null;
+    public static HangmanGame getGame() {
+        if(game == null) {
+            game = new HangmanGame();
+        }
+        return game;
+    }
+
+    public static void startNew() {
+        game = new HangmanGame();
+    }
+
     private static final int MAX_GUESSES = 10;
     private String secretWord;
     private String maskedWord;
@@ -99,7 +112,7 @@ public class HangmanGame implements Parcelable {
         return str;
     }
 
-    @Override
+    /*@Override
     public int describeContents() {
         return 0;
     }
@@ -123,5 +136,5 @@ public class HangmanGame implements Parcelable {
     private HangmanGame(Parcel in) {
         secretWord = in.readString();
         guessesLeft = in.readInt();
-    }
+    }*/
 }

@@ -34,7 +34,8 @@ public class GameActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_game);
 
-        hangmanGame = new HangmanGame();
+        HangmanGame.startNew();
+        hangmanGame = HangmanGame.getGame();
 
         editText = (EditText) findViewById(R.id.user_guess_text);
         button = (Button) findViewById(R.id.guess_button);
@@ -90,7 +91,7 @@ public class GameActivity extends AppCompatActivity {
             if(hangmanGame.addUserGuesses(c)) {
                 if(hangmanGame.isGameOver()) {
                     Intent intent = new Intent(this, ResultActivity.class);
-                    intent.putExtra(GAME_DATA, hangmanGame);
+                    //intent.putExtra(GAME_DATA, hangmanGame);
                     startActivity(intent);
                 }
                 updateView();

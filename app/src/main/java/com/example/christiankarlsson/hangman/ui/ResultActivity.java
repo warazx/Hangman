@@ -26,7 +26,8 @@ public class ResultActivity extends AppCompatActivity {
         setContentView(R.layout.activity_result);
 
         Bundle data = getIntent().getExtras();
-        HangmanGame hangmanGame = data.getParcelable("GAME_DATA");
+        HangmanGame hangmanGame = HangmanGame.getGame();
+        /*HangmanGame hangmanGame = data.getParcelable("GAME_DATA");*/
 
         victoryText = (TextView) findViewById(R.id.victory_text);
         if(hangmanGame.getGuessesLeft() == 1) {

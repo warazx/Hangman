@@ -26,10 +26,18 @@ public class GenerateRandomWord {
             "stövel"
     };
 
+    /**
+     * Get one of the words in the array.
+     * @return random generated word.
+     */
     public static String getWord() {
         return words[rand.nextInt(words.length)];
     }
 
+    /**
+     * Sorts the array in alphabetic order.
+     * @return sorted array.
+     */
     public static String[] getAll() {
         Arrays.sort(words);
         return words;

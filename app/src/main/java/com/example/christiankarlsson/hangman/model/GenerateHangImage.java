@@ -4,6 +4,11 @@ import com.example.christiankarlsson.hangman.R;
 
 public class GenerateHangImage {
 
+    /**
+     * Get the right image from for the number of guesses left.
+     * @param guessesLeft the players numbers of guesses left.
+     * @return id of the image.
+     */
     public static int getImage(int guessesLeft) {
         switch (guessesLeft) {
             case 10:

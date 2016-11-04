@@ -5,6 +5,11 @@ import java.util.ArrayList;
 public class HangmanGame {
 
     private static HangmanGame game = null;
+
+    /**
+     * Singelton getter of the instance.
+     * @return the instnce of the game.
+     */
     public static HangmanGame getGame() {
         if(game == null) {
             game = new HangmanGame();
@@ -12,6 +17,9 @@ public class HangmanGame {
         return game;
     }
 
+    /**
+     * Forces a new game.
+     */
     public void startNew() {
         game = new HangmanGame();
     }
@@ -24,6 +32,9 @@ public class HangmanGame {
     private int guessesLeft;
     private boolean isPaused = false;
 
+    /**
+     * Default constructor for the game.
+     */
     public HangmanGame() {
         secretWord = GenerateRandomWord.getWord().toUpperCase();
         maskedWord = generateMaskedWord(secretWord);
@@ -32,18 +43,25 @@ public class HangmanGame {
         guessesLeft = MAX_GUESSES;
     }
 
+    /**
+     * @return the secret word.
+     */
     public String getSecretWord() {
         return secretWord;
     }
 
-    public ArrayList<Character> getUserGuesses() {
-        return userGuesses;
-    }
-
+    /**
+     * @return guesses left as string.
+     */
     public String getGuessesLeftAsString() {
         return "" + guessesLeft;
     }
 
+    /**
+     * Generate a masked word.
+     * @param s the word that needs to masked.
+     * @return the word masked.
+     */
     private String generateMaskedWord(String s) {
         String str = "";
         for(int i = 0; i < s.length(); i++) {
@@ -52,10 +70,9 @@ public class HangmanGame {
         return str;
     }
 
-    public String getMaskedSecretWord() {
-        return maskedWord;
-    }
-
+    /**
+     * @return guesses left.
+     */
     public int getGuessesLeft() {
         return guessesLeft;
     }
@@ -69,6 +86,11 @@ public class HangmanGame {
         return str;
     }
 
+    /**
+     * Takes one guess from the player.
+     * @param c the gueesed character.
+     * @return if the guess was valid.
+     */
     public boolean addUserGuesses(char c) {
         c = Character.toUpperCase(c);
         for(char used : userGuesses) {
@@ -81,14 +103,23 @@ public class HangmanGame {
         return true;
     }
 
+    /**
+     * @param paused set to pause the game.
+     */
     public void setPaused(boolean paused) {
         isPaused = paused;
     }
 
+    /**
+     * @return if the game is paused.
+     */
     public boolean isPaused() {
         return isPaused;
     }
 
+    /**
+     * @return if the game is over.
+     */
     public boolean isGameOver() {
         return (maskedWord.equals(secretWord) || guessesLeft == 0);
     }
@@ -107,6 +138,9 @@ public class HangmanGame {
         }
     }
 
+    /**
+     * @return a string with all guesses formated.
+     */
     public String getWrongGuesses() {
         String str = "";
         if(wrongGuesses.size() != 0) {

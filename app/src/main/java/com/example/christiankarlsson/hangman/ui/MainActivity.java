@@ -54,6 +54,10 @@ public class MainActivity extends AppCompatActivity {
         return super.onOptionsItemSelected(item);
     }
 
+    /**
+     * Starts a new game.
+     * @param view A view.
+     */
     public void startGame(View view) {
         HangmanGame hangmanGame = HangmanGame.getGame();
         hangmanGame.startNew();
@@ -61,16 +65,28 @@ public class MainActivity extends AppCompatActivity {
         startActivity(intent);
     }
 
+    /**
+     * Resumes a game.
+     * @param view A view.
+     */
     public void resumeGame(View view) {
         Intent intent = new Intent(this, GameActivity.class);
         startActivity(intent);
     }
 
+    /**
+     * About page.
+     * @param view A view.
+     */
     public void aboutApp(View view) {
         Intent intent = new Intent(this, AboutActivity.class);
         startActivity(intent);
     }
 
+    /**
+     * Goes to the library of words.
+     * @param view A view.
+     */
     public void showLibrary(View view) {
         Intent intent = new Intent(this, LibraryActivity.class);
         startActivity(intent);

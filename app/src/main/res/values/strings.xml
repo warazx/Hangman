@@ -1,7 +1,7 @@
 <resources>
     <string name="app_name">Hangman</string>
     <string name="action_settings">Settings</string>
-    <string name="main_startgame_btn_text">Starta spel</string>
+    <string name="main_startgame_btn_text">Nytt spel</string>
     <string name="main_about_btn_text">Om</string>
     <string name="main_title_text">Huvudmeny</string>
     <string name="game_user_guess_hint_text">Vad är din gissning?</string>
